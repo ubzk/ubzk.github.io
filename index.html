@@ -1,93 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Manifesto</title>
+  <title>Raccolta articoli difesa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root {
+      --bg: #060608;
+      --card-bg: #111319;
+      --accent: #c1ff5a;
+      --text-main: #f5f5f5;
+      --text-muted: #b0b3c2;
+      --border: #262938;
+      --link: #7dd3ff;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
-      background: #000;
-      color: #fff;
-      font-family: "Courier New", monospace;
-      line-height: 1.6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #161925 0, var(--bg) 55%);
+      color: var(--text-main);
+      padding: 40px 16px 60px;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
-    .wrapper {
-      max-width: 800px;
-      padding: 40px 20px;
-      text-align: left;
+    .page {
+      width: 100%;
+      max-width: 980px;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      letter-spacing: 0.15em;
+    header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
     }
 
-    h2 {
-      font-size: 1.2rem;
-      letter-spacing: 0.25em;
+    header p {
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      margin: 26px 0 10px;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      margin: 2rem 0 0.75rem;
-      color: #ddd;
+      letter-spacing: 0.16em;
+      color: var(--accent);
     }
 
-    p {
+    .articles {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease;
+    }
+
+    .article-card:hover {
+      border-color: var(--accent);
+      background: #171a24;
+      transform: translateY(-1px);
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .article-title {
+      font-weight: 600;
+      margin-bottom: 4px;
       font-size: 0.98rem;
-      margin-bottom: 0.9rem;
     }
 
-    .accent {
-      color: #f5f5f5;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.8rem;
-      margin-bottom: 1.5rem;
+    .article-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
     }
 
-    .footer-note {
-      margin-top: 2.5rem;
-      font-size: 0.75rem;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
+    .article-link a {
+      font-size: 0.86rem;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .article-link a:hover {
+      text-decoration: underline;
+    }
+
+    .spacer {
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 28px 10px 40px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="accent">/ Manifesto</div>
+  <div class="page">
+    <header>
+      <h1>Articoli su difesa e sicurezza</h1>
+      <p>Selezione di articoli ordinati cronologicamente. In alto puoi aggiungere gli ultimi aggiornamenti.</p>
+    </header>
 
-    <h1>Title Of Your Manifesto</h1>
+    <!-- Spazio per inserire manualmente gli articoli più recenti -->
+    <div class="section-title">Ultimi articoli (da aggiungere)</div>
+    <div class="spacer">
+      Aggiungi qui gli articoli più recenti copiando una delle card qui sotto
+      e modificando data, titolo, descrizione e URL.
+    </div>
 
-    <p>Your opening statement goes here. Replace this text with your own words.</p>
-    <p>Use short, direct lines. Add as many paragraphs as you need.</p>
+    <!-- Archivio in ordine cronologico (dal più vecchio al più recente) -->
+    <div class="section-title">Archivio cronologico</div>
+    <div class="articles">
 
-    <h2>Section Heading</h2>
-    <p>More of your manifesto text. Describe principles, rules, or beliefs.</p>
-    <p>Feel free to duplicate these paragraphs and headings.</p>
+      <!-- 2024-01-04 (esempio) Dagospia Albania -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>04/01/2024</span>
+          <span>Dagospia</span>
+        </div>
+        <div class="article-title">
+          L'Italia ha un sistema di difesa così misero che potrebbe invaderci l'Albania
+        </div>
+        <div class="article-desc">
+          Editoriale pungente sullo stato delle capacità militari italiane e sui limiti strutturali del sistema di difesa.
+        </div>
+        <div class="article-link">
+          <a href="https://www.dagospia.com/cronache/l-italia-sistema-difesa-misero-potrebbe-invaderci-l-albania-439243" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
 
-    <h2>Another Section Heading</h2>
-    <p>Continue your thoughts, declarations, or demands here.</p>
+      <!-- 2024-03-10 (esempio) Dagospia piano difesa UE -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>10/03/2024</span>
+          <span>Dagospia</span>
+        </div>
+        <div class="article-title">
+          Difendersi da Putin costerà carissimo all'Europa
+        </div>
+        <div class="article-desc">
+          Analisi dei costi e delle implicazioni del piano di difesa comune europeo volto a contenere la minaccia russa.
+        </div>
+        <div class="article-link">
+          <a href="https://www.dagospia.com/politica/difendersi-putin-costera-carissimo-all-europa-piano-difesa-comune-prevede-450803" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
 
-    <div class="footer-note">
-      // Insert a date, place, or signature here
+      <!-- 2024-09-12 (esempio) Dagospia piano difesa integrata -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>12/09/2024</span>
+          <span>Dagospia</span>
+        </div>
+        <div class="article-title">
+          Von der Leyen presenta il piano di difesa europea integrata e lo scudo aereo
+        </div>
+        <div class="article-desc">
+          Presentazione del progetto di difesa comune UE, con enfasi sullo scudo aereo e sull'integrazione industriale.
+        </div>
+        <div class="article-link">
+          <a href="https://www.dagospia.com/politica/von-der-leyen-presenta-piano-difesa-europea-integrata-scudo-aereo-450668" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-05-08 Sassate Conserva/Ottaviani -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>08/05/2025</span>
+          <span>Sassate</span>
+        </div>
+        <div class="article-title">
+          Il generale Conserva nuovo CSM dell'Aeronautica, l'ammiraglio Ottaviani alla DNA
+        </div>
+        <div class="article-desc">
+          Cronaca delle nuove nomine ai vertici dell'Aeronautica Militare e della Direzione nazionale armamenti.
+        </div>
+        <div class="article-link">
+          <a href="https://sassate.it/difesa-il-generale-conserva-nuovo-csm-dellaeronautica-lammiraglio-ottaviani-alla-dna" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-07-XX Sassate Rheinmetall vs KNDS (data non indicata, usa placeholder) -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>2025</span>
+          <span>Sassate</span>
+        </div>
+        <div class="article-title">
+          Derby Rheinmetall–KNDS per il carro armato europeo: in palio c'è Iveco Defence
+        </div>
+        <div class="article-desc">
+          Approfondimento sulla competizione industriale per il nuovo carro armato europeo e sul ruolo di Iveco Defence.
+        </div>
+        <div class="article-link">
+          <a href="https://sassate.it/difesa-derby-rheinmetall-knds-per-il-carro-armato-europeo-in-palio-ce-iveco-defence" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-07-XX Sassate settimane decisive industria europea -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>2025</span>
+          <span>Sassate</span>
+        </div>
+        <div class="article-title">
+          Settimane decisive per l'industria europea della difesa e per la vendita di Iveco Defence
+        </div>
+        <div class="article-desc">
+          Analisi delle prospettive dell'industria militare europea e degli scenari legati alla cessione di Iveco Defence.
+        </div>
+        <div class="article-link">
+          <a href="https://sassate.it/difesa-settimane-decisive-per-lindustria-europea-5-del-pil-e-italiana-vendita-iveco-defence" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-01 circa RID tronchi stradali -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>11/2025</span>
+          <span>RID</span>
+        </div>
+        <div class="article-title">
+          Le operazioni aeree da tronchi stradali
+        </div>
+        <div class="article-desc">
+          Studio delle capacità operative degli aerei militari operanti da piste ricavate su tratti stradali.
+        </div>
+        <div class="article-link">
+          <a href="https://www.rid.it/shownews/7704/le-operazioni-aeree-da-tronchi-stradali" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-XX RID F-35B Kaga -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>11/2025</span>
+          <span>RID</span>
+        </div>
+        <div class="article-title">
+          Prove di interoperabilità: F‑35B dei Marines sulla portaerei giapponese Kaga
+        </div>
+        <div class="article-desc">
+          Resoconto delle prove congiunte tra US Marines e Marina giapponese per integrare gli F‑35B sulla Kaga.
+        </div>
+        <div class="article-link">
+          <a href="https://www.rid.it/shownews/7717/prove-di-interoperabilita-f-35b-dei-marines-sulla-portaerei-giapponese-kaga" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-XX Ali nella tragedia -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>11/2025</span>
+          <span>Analisi Difesa</span>
+        </div>
+        <div class="article-title">
+          Ali nella tragedia: gli aviatori italiani dopo l'8 settembre
+        </div>
+        <div class="article-desc">
+          Ricostruzione storica delle vicende degli aviatori italiani dopo l'armistizio dell'8 settembre 1943.
+        </div>
+        <div class="article-link">
+          <a href="https://www.analisidifesa.it/2025/11/ali-nella-tragedia-li-aviatori-italiani-dopo-l8-settembre/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-XX Macron leva militare volontaria -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>11/2025</span>
+          <span>Analisi Difesa</span>
+        </div>
+        <div class="article-title">
+          In Francia il presidente Macron annuncia la leva militare volontaria
+        </div>
+        <div class="article-desc">
+          Panoramica sul nuovo modello di leva volontaria annunciato da Macron e sulle sue implicazioni strategiche.
+        </div>
+        <div class="article-link">
+          <a href="https://www.analisidifesa.it/2025/11/in-francia-il-presidente-macron-annuncia-la-leva-militare-volontaria/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-28 Mangusta 2025 -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>28/11/2025</span>
+          <span>Difesa Online</span>
+        </div>
+        <div class="article-title">
+          Mangusta 2025: l'Italia al comando della principale esercitazione aviolanciata multinazionale dell'anno
+        </div>
+        <div class="article-desc">
+          Resoconto dell'esercitazione Mangusta 2025 e del ruolo di leadership assunto dall'Esercito italiano.
+        </div>
+        <div class="article-link">
+          <a href="https://www.difesaonline.it/2025/11/28/mangusta-2025-litalia-al-comando-della-principale-esercitazione-aviolanciata-multinazionale-dellanno/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-11-29 Riserva esercito -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>29/11/2025</span>
+          <span>Difesa Online</span>
+        </div>
+        <div class="article-title">
+          Quali forze di riserva per l'Esercito?
+        </div>
+        <div class="article-desc">
+          Discussione sulle opzioni organizzative per potenziare le forze di riserva dell'Esercito italiano.
+        </div>
+        <div class="article-link">
+          <a href="https://www.difesaonline.it/2025/11/29/quali-forze-di-riserva-per-lesercito/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-12-01 RID loitering munitions -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>01/12/2025</span>
+          <span>RID</span>
+        </div>
+        <div class="article-title">
+          Germania: 6 batterie di loitering munition a medio raggio entro il 2029
+        </div>
+        <div class="article-desc">
+          Annuncio dei piani tedeschi per costituire sei batterie di munizioni circuitanti a medio raggio entro il 2029.
+        </div>
+        <div class="article-link">
+          <a href="https://www.rid.it/shownews/7722/germania-6-batterie-di-loitering-munition-a-medio-raggio-entro-il-2029" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-12-01 Nord Corea & Russia -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>01/12/2025</span>
+          <span>Difesa Online</span>
+        </div>
+        <div class="article-title">
+          L'evoluzione del comparto militare‑industriale nordcoreano e la sponda russa
+        </div>
+        <div class="article-desc">
+          Analisi dello sviluppo militare‑industriale della Corea del Nord e del supporto strategico fornito dalla Russia.
+        </div>
+        <div class="article-link">
+          <a href="https://www.difesaonline.it/2025/12/01/levoluzione-del-comparto-militare-industriale-nordcoreano-e-la-sponda-russa/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
+      <!-- 2025-12-XX Accordo ELT Group - KAUST -->
+      <article class="article-card">
+        <div class="article-meta">
+          <span>12/2025</span>
+          <span>Analisi Difesa</span>
+        </div>
+        <div class="article-title">
+          Accordo tecnologico tra ELT Group e l'università saudita King Abdullah
+        </div>
+        <div class="article-desc">
+          Dettagli della collaborazione tecnologica tra ELT Group e la King Abdullah University of Science and Technology.
+        </div>
+        <div class="article-link">
+          <a href="https://www.analisidifesa.it/2025/12/accordo-tecnologico-tra-elt-group-e-luniversita-saudita-king-abdullah/" target="_blank" rel="noopener">
+            Vai all'articolo
+          </a>
+        </div>
+      </article>
+
     </div>
   </div>
 </body>
